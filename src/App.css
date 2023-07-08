@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.App {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  overflow: hidden;
+}
+
+.column {
+  background: rgb(254, 205, 203);
+  background: radial-gradient(
+    circle,
+    rgba(254, 205, 203, 1) 30%,
+    rgb(227, 167, 181) 100%
+  );
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    flex-direction: column;
+  }
+  .column {
+    height: 50vh;
+  }
+  .configurator {
+    height: auto;
+    padding-top: 20px;
+  }
+}
+
+.configurator {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #efefef;
+  box-shadow: -12px 0px 195px -7px rgba(0, 0, 0, 0.192);
+  -webkit-box-shadow: -12px 0px 195px -7px rgba(0, 0, 0, 0.192);
+  -moz-box-shadow: -12px 0px 195px -7px rgba(0, 0, 0, 0.192);
+  z-index: 999;
+}
+
+.configurator__section {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.configurator__section__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #353734;
+}
+
+.configurator__section__values {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  gap: 25px;
+  /* height: 50px; */
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.4s;
+}
+
+.item:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.item__dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  border: solid 2px #999999;
+}
+
+.item.item--active .item__dot {
+  border: solid 2px white;
+}
+
+.item__label {
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 12px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.item.item--active .item__label {
+  color: white;
+}
+
+.circle {
+  height: 30px;
+  width: 30px;
+  background-color: rgb(215, 215, 215);
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.circle--active {
+  height: 40px;
+  width: 40px;
+  background-color: rgb(215, 215, 215);
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.circle:hover {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.circle-red {
+  height: 30px;
+  width: 30px;
+  background-color: red;
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.circle-red--active {
+  height: 40px;
+  width: 40px;
+  background-color: red;
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.circle-red:hover {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.circle-green {
+  height: 30px;
+  width: 30px;
+  background-color: green;
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.circle-green--active {
+  height: 40px;
+  width: 40px;
+  background-color: green;
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.circle-green:hover {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.circle-aquamarine {
+  height: 30px;
+  width: 30px;
+  background-color: aquamarine;
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.circle-aquamarine--active {
+  height: 40px;
+  width: 40px;
+  background-color: aquamarine;
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.circle-aquamarine:hover {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.circle-sapphire {
+  height: 30px;
+  width: 30px;
+  background-color: blue;
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.circle-sapphire--active {
+  height: 40px;
+  width: 40px;
+  background-color: blue;
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.circle-sapphire:hover {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.circle-gold {
+  height: 30px;
+  width: 30px;
+  background-color: rgb(254, 216, 42);
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.circle-gold--active {
+  height: 40px;
+  width: 40px;
+  background-color: rgb(254, 216, 42);
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.circle-gold:hover {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.circle-rosegold {
+  height: 30px;
+  width: 30px;
+  background-color: pink;
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.circle-rosegold--active {
+  height: 40px;
+  width: 40px;
+  background-color: pink;
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.circle-rosegold:hover {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.engrave {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  color: #000;
+  width: 60%;
+  padding: 13px;
+  transition: all 0.2 ease-in-out;
+}
+
+select {
+  width: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #000;
+  padding: 13px;
+  border: 1px solid #ccc;
+}
+
+/* Tooltip text */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(0, 0, 0, 0.87);
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 0;
+  font-size: 13px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.karats {
+  height: 30px;
+  width: 30px;
+  background-color: #d7d7d7;
+  border-radius: 40px;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #353734;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.karats:hover {
+  height: 40px;
+  width: 40px;
+}
+
+.karats--active {
+  height: 40px;
+  width: 40px;
+  background-color: #d7d7d7;
+  border-radius: 40px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #353734;
+  border: 2px solid #fff;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.price {
+  color: #353734;
+  font-size: 18px;
+}
